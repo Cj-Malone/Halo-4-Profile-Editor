@@ -1,3 +1,11 @@
+*.so
+
+# qmake generated
+moc_Halo4ProfileDialog.cpp
+qrc_resources.cpp
+ui_Halo4ProfileDialog.h
+Makefile
+
 # Compiled Object files
 *.slo
 *.lo
