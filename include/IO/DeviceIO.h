@@ -4,6 +4,8 @@
 #ifndef DEVICEIO_H
 #define DEVICEIO_H
 
+#define FAT_SECTOR_SIZE 0x200
+
 #include "BaseIO.h"
 #include "../Fatx/FatxHelpers.h"
 #include "XboxInternals_global.h"
@@ -11,7 +13,10 @@
 class XBOXINTERNALSSHARED_EXPORT DeviceIO : public BaseIO
 {
 public:
+    #ifdef __WIN32
     DeviceIO(void* deviceHandle);
+    #endif
+    
     DeviceIO(std::string devicePath);
     DeviceIO(std::wstring devicePath);
     virtual ~DeviceIO();
@@ -41,7 +46,7 @@ private:
     std::string yolo;
 
     UINT64 pos;
-    BYTE lastReadData[0x200];
+    BYTE lastReadData[FAT_SECTOR_SIZE];
     UINT64 lastReadOffset;
 };
 

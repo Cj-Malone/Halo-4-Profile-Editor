@@ -24,7 +24,7 @@ QMAKE_CXXFLAGS += -fpermissive
 
 # xbox internals
 INCLUDEPATH += $$PWD/include
-LIBS += -L$$PWD/include/ -lXboxInternals
+# LIBS += -L$$PWD/include/ -lXboxInternals
 
 # botan
 win32 {
