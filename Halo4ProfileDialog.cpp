@@ -1,4 +1,4 @@
-#include "Halo4ProfileDialog.h".h"
+#include "Halo4ProfileDialog.h"
 #include "ui_Halo4ProfileDialog.h"
 
 Mission halo4Missions[] =
